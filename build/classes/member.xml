@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" 
+"http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap>
+	<typeAlias alias="member" type="model.Member33Bean" />
+
+    <typeAlias alias="zipcode" type="model.ZipcodeBean2" />    
+     
+     <!-- 아이디 중복체크 -->
+     <select id="member_idcheck" parameterClass="String"
+     	resultClass="member">
+      	 select mem_code from member33 where mem_id=#id#
+     </select>	
+     
+    <!-- 우편번호 검색 -->
+    <select id="zipcodeList" parameterClass="String" 
+    	resultClass="zipcode">
+    	 select * from zipcode where dong like #dong#
+    </select>
+    <!-- like 문은 ~와 비슷한 문자열을 찾아서 검색 -->
+     
+    <!-- 아이디에 해당하는 회원정보 검색 -->
+    <select id="id_search" parameterClass="String" 
+    	resultClass="member">
+    	 select * from member33 where mem_id=#mem_id# and mem_state=1
+    </select>
+    
+    <!-- 회원저장 -->
+    <insert id="memInsert" parameterClass="member">
+    	insert into member33 (mem_code,mem_id,mem_pwd,mem_name,mem_zip,
+    		mem_zip2,mem_addr,mem_addr2,mem_phone,mem_email,mem_regdate,
+    		mem_state) 
+    	values(member33_seq.nextval,#mem_id#,#mem_pwd#,
+    		#mem_name#,#mem_zip#,#mem_zip2#,#mem_addr#,#mem_addr2#,#mem_phone#,
+   			 #mem_email#,sysdate,1)
+    </insert>
+    
+    <!-- 비번 검색 -->
+    <select id="pwd_find" parameterClass="member" 
+    	resultClass="member">
+     	select mem_pwd from member33 
+     	where 
+     		mem_id=#mem_id# and mem_name=#mem_name#
+    </select>    
+        
+    <!-- 정보수정 -->
+    <update id="memEdit" parameterClass="member">
+     	update member33 set 
+     		mem_pwd=#mem_pwd#,
+     		mem_name=#mem_name#,
+     		mem_zip=#mem_zip#,
+     		mem_zip2=#mem_zip2#,
+     		mem_addr=#mem_addr#,
+     		mem_addr2=#mem_addr2#,
+     		mem_phone=#mem_phone#,
+     		mem_email=#mem_email#
+     	where mem_id=#mem_id#    
+    </update>
+    
+    <!-- 회원탈퇴 -->
+    <update id="memDEL" parameterClass="member">
+     	update member33 set 
+     		mem_delcont=#mem_delcont#,
+     		mem_deldate=sysdate,
+     		mem_state=2 
+     	where mem_id=#mem_id#
+    </update> 
+</sqlMap>
+

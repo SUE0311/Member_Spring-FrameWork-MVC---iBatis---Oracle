@@ -1,0 +1,147 @@
+@CHARSET "UTF-8";
+
+/*guest_write.jsp ui */
+#gwrite_wrap{
+	width:450px; height:380px; margin-top:40px;
+	margin-left:auto; margin-right:auto;
+	/* border:1px solid skyblue; border-radius:15px;
+	box-shadow:15px 15px 15px red; */
+}
+#gwrite_wrap .gwrite_title{
+	margin:20px 0 0 150px; width:140px; /* background:pink;
+	border-radius:10px; */ text-align:center;
+	padding:3px;font-size:20px;
+}
+#gwrite_t{
+	margin:20px 0 0 20px;
+}
+#gwrite_t th{
+	background:#FFFFCC; border-radius:5px;	
+}
+
+#gwrite_t td{
+	border:none;
+}
+/* .box{
+	border:1px solid skyblue; border-radius:13px;
+	padding:2px;
+} */
+#gwrite_menu{
+	margin:20px 0 0 190px;
+}
+/* .input_b:hover{
+	cursor:hand; cursor:pointer;
+    background:#ccc; border-radius:15px; padding:2px;
+    border:1px solid red; font-weight:bold;	
+} */
+
+/*guest_list.jsp ui */
+#gList_wrap{
+  width:500px; padding:10px;
+  /* border:1px solid skyblue; border-radius:15px; */
+  margin-top:20px; margin-left:auto; margin-right:auto;
+  /* box-shadow:10px 10px 10px red; */	
+}
+a:link{text-decoration:none;}
+a:active{text-decoration:none;}
+a:visited{text-decoration:none;}
+a:hover{text-decoration:underline;}
+#gList_wrap .gList_title{
+	margin:20px 0 0 185px; width:120px;
+	padding:3px; /* background:pink; border-radius:10px; */
+	font-size:20px; text-align:center;
+}
+#gList_count{
+	margin:20px 0 0 350px;
+}
+#gList_t{
+	width:550px;
+	margin:20px 0 0 -20px;
+}
+
+#gList_t th, td{
+	border:1px solid #ededed;
+}
+
+#gList_menu{
+    margin:20px 0 0 460px;	
+}
+
+/* guest_cont.jsp ui */
+#gCont_wrap{
+	width:550px; padding:10px;
+	/* border:1px solid skyblue; border-radius:15px; */
+	margin-top:40px; margin-left:auto; margin-right:auto;
+	/* box-shadow:10px 10px 10px red; */
+}
+#gCont_wrap .gCont_title{
+	margin:20px 0 0 200px; width:160px; 
+	/* background:pink; border-radius:10px; */ font-size:19px;
+	text-align:center;padding:2px;
+}
+#gCont_t{
+	width:550px;
+	margin:20px 0 0 0;
+}
+#gCont_t th{
+	width:150px;
+	background:#FFFFCC; border-radius:5px;	
+}
+#gCont_t th, td{
+	border:1px solid #ededed;
+}
+#gCont_menu{
+    margin:20px 0 20px 200px;	
+}
+
+/* guest_edit.jsp ui */
+#gEdit_wrap{
+  	width:450px; height:380px; margin-top:40px;
+	margin-left:auto; margin-right:auto;
+	/* border:1px solid skyblue; border-radius:15px;
+	box-shadow:15px 15px 15px red; */	
+}
+#gEdit_wrap .gEdit_title{
+	margin:20px 0 0 150px; width:140px; /* background:pink;
+	border-radius:10px; */ text-align:center;
+	padding:3px;font-size:20px;
+}
+#gEdit_t{
+	margin:20px 0 0 20px;
+}
+#gEdit_t th{
+	background:#FFFFCC; border-radius:5px;	
+}
+#gEdit_t td{
+	border:none;
+}
+#gEdit_menu{
+	margin:20px 0 0 180px;
+}
+
+/*guest_del.jsp ui*/
+#gDel_wrap{
+	width:260px; height:180px; margin-top:100px;
+	margin-left:auto; margin-right:auto;  
+	border:2px solid #FFCC66; border-radius:15px;
+	box-shadow:10px 10px 10px #FFFFCC;
+}
+#gDel_wrap .gDel_title{
+    margin:20px 0 0 60px; width:120px;
+    font-size:20px;	
+    /* background:pink;
+    border-radius:15px; */
+    text-align:center; padding:3px;
+}
+#gDel_t{
+    margin:15px 0 0 20px;	
+}
+#gDel_t th{
+	background:#FFFFCC; border-radius:5px;
+}
+#gDel_t td{
+    border:none;	
+}
+#gDel_menu{
+	margin:15px 0 0 80px;
+}

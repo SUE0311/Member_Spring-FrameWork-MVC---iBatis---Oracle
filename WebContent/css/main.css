@@ -1,0 +1,227 @@
+@CHARSET "UTF-8";
+
+body{
+	font-family:"Tahoma", "나눔고딕", "NanumGothic", "맑은 고딕";
+}
+
+#main_wrap{
+	width:924px; /*폭 지정*/
+	height:800px; /*높이 */
+	margin-left:auto; margin-right:auto; /* div 중앙정렬*/
+	margin-top:20px; /*바깥 상단 여백 지정 */
+	border:3px solid #60BEAE; /* 테두리 실선 하늘색으로 그린다.*/
+	border-radius:20px; /*css3 에 새롭게 추가된 명령어로 테두리를 둥글게 */
+}
+#top {     
+	border-bottom: thick solid #030;
+    border-radius:15px;
+	height: 150px;
+	width: 100%;
+}
+
+#header{
+	width:904px; height:200px; 
+	margin:10px 0 0 10px; /*시계방향으로 위,오른쪽,아래쪽,왼쪽, 바깥 여백 설정 */
+	border:1px solid green;
+	border-radius:15px;
+	position:relative;
+}
+
+#logo{
+	width:200px; height:180px;
+	margin:-45px 0 0 0;
+	/*border:1px solid blue;
+	border-radius:10px; */
+	float:left; /*div 안의  div를 수직정렬에서 수평정렬로 바꾼다. 아주중요*/
+}
+#top_menu{
+	width:600px; height:180px;
+	margin:5px 0 0 50px;
+	/*border:1px solid blue;
+	border-radius:10px; */
+	float:left;
+}
+
+#top_login{
+    width:230px; height:40px;
+    /* border:1px solid blue; */
+    border-radius:10px; 
+    background: #EFF8F7;
+    position:absolute;
+    top:20px; right:20px;
+}
+
+.clear{
+	clear:both;
+	/*div 영역간 간섭을 없앰 */
+}
+
+/*input style*/
+input, input[type="password"]{
+	/* border: 0; */
+	color: #6d6e71;
+	font-size: 13px;
+	padding: 5px 10px;
+	border-radius:5px;
+	cursor: pointer;
+}
+
+textarea{
+	height: 10em;
+	padding: 8px 10px;
+	color: #6d6e71;
+	font-size: 13px;
+	/* margin-bottom: 10px; */
+	border-radius:5px;
+	cursor: pointer;
+} 
+
+input[type="submit"] {
+	background: #7bcab0;
+	color: #6d6e71;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 13px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	opacity: 1;
+	padding:5px 8px;
+}
+
+#article{
+	width:904px; height:470px; 
+	margin-left:auto; margin-right:auto;
+	margin-top:10px;
+	border:1px solid #FFCC66;
+	border-radius:15px;
+}
+.article_cont{  /* 메인 내용-이미지 */
+	margin:20px 0 0 25px;
+}
+
+#left_menu{
+	width:240px; height:450px;
+	margin:10px 0 0 10px;
+	/* border:1px solid blue;  */
+	border-radius:10px;
+	float:left;
+	background: #FFFFCC;
+}
+
+#article_c{
+    width:630px; height:450px;
+    margin:10px 0 0 10px;
+    border:1px solid #FF9900; 
+    border-radius:10px;
+    float:left;	
+}
+
+#footer{
+	width:904px; height:84px;
+	margin-left:auto; margin-right:auto;
+	margin-top:10px; 
+	border:1px solid #669900; 
+	border-radius:15px;
+	position:relative;
+}
+
+#logo img{
+  margin:45px 0 0 18px;	
+}
+
+
+#top_menu ul li{
+	list-style:none; /*목록앞 점 없애기 */
+    float:left; /*목록 수직정렬을 수평정렬로 */
+    margin:135px 0 0 5px;
+    padding:0 40px 0 0;/*안여백을 설정 
+    시계방향으로 위,오른쪽,아래쪽,왼쪽*/
+}
+
+a:link{text-decoration:none; }/*하이퍼링크 된곳 밑줄없앰 */
+a:hover{
+	text-decoration:underline; /*하이퍼링크 된곳 마우스 오버시
+	밑줄 나오게 함*/
+}
+a:active{
+	text-decoartion:none;/*하이퍼링크 된곳 클릭하는 순간 밑줄 없애기 */
+}
+a:visited{
+	text-decoration:none;/*하이퍼링크 된곳 한번이라도 방문 한곳 밑줄
+	없애기*/
+}
+
+#top_login ul li{
+	 list-style:none;
+	 font-size:10pt; /*글자 크기 조절 */
+	 float:left;
+	 padding:0 10px 0 0;
+	 margin:-5px 0 0 10px;
+}
+
+#login_t{
+	margin:40px 0 0 10px;
+}
+
+/* #login_t th{
+	background:skyblue; border-radius:2px;
+} */
+
+/* .input_box{
+	border-radius:10px; padding:2px;
+	border:1px solid blue;
+} */
+
+/* .input_box:hover{ 마우스 오버  시 이벤트 발생
+	background:#ccc; 배경색
+} */
+
+#login_menu{
+	margin:14px 0 0 40px;	
+}
+/* .input_b:hover{
+	cursor:hand; cursor:pointer; 마우스 오버시 손가락 모양
+	border:1px solid red;
+	border-radius:10px; padding:2px; 상하좌우 안 여백 설정
+	font-weight:bold; 글자를 진하게
+} */
+#footer .footer_title{
+	font-size:15px;
+	padding-top:10px;
+}
+
+/*관리자 UI*/
+#admin_menu{
+	width:100px; height:30px;
+	padding:10px 0 0 15px;
+	border:2px solid #FFCC66; border-radius:15px;
+	box-shadow:10px 10px 10px #FFFFCC;
+	position:absolute;
+	top:20px; right:20px;
+}
+
+/*contentList*/
+#contentList{
+	padding-left:20px;
+	font-size:13px;
+}
+
+#contentList h3{
+	width:70%;
+	border:3px solid #ebebeb;
+	padding:5px 0;
+}
+
+#contentList p{
+	color:#009933;	
+}
+
+#leftList{
+	width:50%;
+	float:left;
+}
+
+#rightList{
+	width:50%;
+	float:left;
+}

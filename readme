@@ -1,0 +1,42 @@
+<개요>
+1. 어플리케이션 명 : Spring MVC 웹 사이트 
+   - 회원관리, 방명록 기능 구현
+2. 작성자 : 이지수
+3. 작성일 : 2013.09.06
+
+<소개>
+이것은 Spring FrameWork를 활용하여 제작한 MVC 웹 개발 연습용 사이트입니다.  
+중앙정보처리학원 "김진성 강사님" 지도하에 제작을 진행하였습니다. 
+본 오픈소스에서 담은 내용은 "회원가입","방명록" 영역입니다.
+회원가입의 경우 모든 기능을 Spring Framework + iBatis로 구현하였고,
+방명록의 경우 Model2, Spring Framework, iBatis, JBDC를 혼용하여 연습하였습니다. 
+* Member와 Gust의 Class Modeling 을 확인하시어 클래스의 구현 내용을 참조하시기 바랍니다.
+
+<작업 환경>
+Eclipse IDE - Dynamic Web project
+Oracle 11g
+Tomcat 7.0 
+Spring FrameWork 3.0
+JDBC
+iBatis 2.3
+ObjectAid UML Diagram (Class Modeling)
+
+<테스트 순서 및 방법>
+
+1. 이클립스에 프로젝트를 import 하십시오.
+- WEB-INF 하위 lib 폴더에 Spring FrameWork 사용을 위한 jar 파일이 담아있습니다.
+
+2. Oracle Source 관련 내용을 본인 계정으로 변경하십시오.
+- WEB-INF 하위에 spring-oracle.xml 파일에서 username과 password 부분을 확인하십시오.
+- src 하위에 dbconnect.properties 파일에서 username과 password 부분을 확인하십시오.
+
+3. sql 폴더에 있는 sql 파일로 테이블을 만드십시오.
+- 데이터베이스는 Oracle 11g 입니다.
+- member33.sql, guest33.sql로 테이블을 생성하십시오.
+- zipcode.sql과 zipcode-data.sql은 회원 가입시 우편번호로 주소 검색을 위해 필요한 데이터입니다.
+(zipcode 테이블을 생성 후 zipcode-data 파일의 자료를 insert하셔야 합니다.)
+
+4. 설정이 완료되면 server를 시작하고, WebContent 하위에 있는 index.jsp를 run하십시오.
+- 프로젝트 하위에 있는 main.png 파일을 확인하시어 해당 화면이 나오면 서비스 가능합니다.
+
+5. 메인 화면에서 회원 가입 후 로그인, 방명록 글쓰기 등의 순으로 테스트해보십시오.

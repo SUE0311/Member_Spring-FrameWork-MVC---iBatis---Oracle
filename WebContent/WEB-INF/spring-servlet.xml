@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- HandlerMapping -->
+	<bean id="handlerMapping"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<value>
+				<!-- 회원관리 : iBatis -->
+				/member_Login.do=memberController
+				/member_Join.do=memberController
+				/mem_idcheck.do=memberController 
+				/zip_find.do=memberController 
+				/zip_find_ok.do=memberController
+				/member_Join_Ok.do=memberController
+				/pwd_Find.do=memberController
+				/pwd_Find_ok.do=memberController				
+				/member_Login_ok.do=memberController
+				/member_Logout.do=memberController
+				/member_Edit.do=memberController
+				/member_Edit_ok.do=memberController
+				/index.do=memberController
+				/member_DEL.do=memberController
+				/member_DEL_ok.do=memberController
+				
+				<!-- 방명록 : spring+jdbc+ibatis  -->
+				/guest_write.do=guestController
+				/guest_write_ok.do=guestController
+				/guest_list.do=guestController
+				/guest_cont.do=guestController
+				/guest_edit.do=guestController
+				/guest_edit_ok.do=guestController
+				/guest_del.do=guestController
+				/guest_del_ok.do=guestController
+				
+			</value>
+		</property>
+	</bean>
+
+	<!-- Controller -->	
+	
+	  <!-- 회원관리 컨트롤러-->
+	  <bean id="memberController" class="controller.MemberController" 
+	  	p:memService-ref="memService" />	 
+	  
+	  <!-- 방명록 컨트롤러-->	  
+	  <bean id="guestController" class="controller.GuestController" 
+	  	p:guestService-ref="guestService"  
+	  	p:guestService2-ref="guestService2" />
+	  
+              
+	<!-- ViewResolver -->
+	<bean id="internalResourceViewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass">
+			<value>org.springframework.web.servlet.view.JstlView</value>
+		</property>
+		<property name="prefix">
+			<value>jsp/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>	
+</beans>
+
+

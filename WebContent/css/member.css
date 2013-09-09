@@ -1,0 +1,157 @@
+@CHARSET "UTF-8";
+
+/*member_login.jsp ui */
+#login_wrap{
+	width:300px; height:220px; border:2px solid #FFCC66;
+	border-radius:20px; box-shadow:15px 15px 15px #FFFFCC;
+	margin-left:auto; margin-right:auto;
+	margin-top:100px;
+}
+#login_wrap .login_title{
+	margin:18px 0 -15px 100px;
+	width:90px;
+	/* background:pink; border-radius:15px; */ font-size:19px;
+	text-align:center; padding:3px;
+}
+.input_Login{
+	width:60px; height:60px;
+}
+
+/* .box{
+	border:1px solid blue; border-radius:10px; padding:3px;
+}
+.box:hover{
+	background:#ccc;
+} */
+/* .input_b:hover{
+    cursor:hand;cursor:pointer; background:pink;
+    font-weight:bold; border-radius:10px; border:1px dotted red;
+    dotted는 실선이 아니라 점선을 그린다.	
+} */
+#login_t{
+    margin:40px 0 0 15px;
+    border-collapse:collapse;		
+}
+#login_t td{
+    border:none;	
+}
+/* member_join.jsp ui */
+#join_wrap{
+  width:540px; height:450px; /* border:1px solid skyblue; */
+  border-radius:15px; margin-top:0; margin-left:auto;
+  margin-right:auto; /* box-shadow:10px 10px 10px red; */	
+}
+#join_wrap .join_title{
+  margin:10px 0 0 230px; width:80px;
+  /* background:pink; border-radius:15px; */ font-size:19px;
+  text-align:center; padding:2px;	
+}
+#join_t{
+  margin:10px 0 0 37px;	
+}
+#join_t th{
+	background:#FFFFCC; border-radius:5px;	
+} 
+#join_menu{
+	margin:10px 0 0 180px;
+}
+/* pwd_find.jsp ui */
+#pwd_wrap{
+	width:260px; height:200px;
+	border:2px solid #FFCC66; margin-top:100px;
+	margin-left:auto; margin-right:auto;
+	border-radius:15px; box-shadow:10px 10px 10px #FFFFCC;
+}
+#pwd_wrap .pwd_title{
+	margin:10px 0 0 86px; width:80px;
+	/* background:pink; border-radius:12px; */ font-size:19px;
+	text-align:center; padding:5px;
+}
+#pwd_t{
+	margin:20px 0 0 20px;
+}
+#pwd_t th{
+	background:#FFFFCC; border-radius:5px;
+}
+#pwd_menu{
+	margin:15px 0 0 40px;
+}
+
+/* pwd_find_ok.jsp ui */
+#pwdok_wrap{
+	width:200px; height:160px;
+	margin-top:100px; margin-left:auto; margin-right:auto;
+	border:1px solid #FFCC66; border-radius:15px;
+	box-shadow:10px 10px 10px #FFFFCC;
+}
+#pwdok_wrap .pwdok_title{
+	margin:20px 0 0 37px; width:120px; font-size:19px;
+	/* background:pink; border-radius:13px; */ padding:5px;
+	text-align:center;
+}
+#pwdok_t{
+    margin:20px 0 0 35px;    	
+}
+#pwdok_t th{
+	background:#FFFFCC; border-radius:13px;
+}
+#pwdok_menu{
+	margin:15px 0 0 65px;
+}
+
+/* index.jsp ui */
+#index_wrap{
+	width:200px; height:150px;
+	border:2px solid #FFCC66; margin-top:10px;
+	margin-left:auto; margin-right:auto;
+	border-radius:15px; box-shadow:10px 10px 10px #FFFFCC;
+	background:#fff;
+}
+#index_t{
+	margin:20px 0 0 5px;
+}
+
+/* member_edit.jsp ui */
+#edit_wrap{
+	width:540px; height:450px; /* border:1px solid skyblue; */
+ 	border-radius:15px; margin-top:0; margin-left:auto;
+  	margin-right:auto; /* box-shadow:10px 10px 10px red; */
+}
+#edit_wrap .edit_title{
+	margin:10px 0 0 230px; width:80px;
+    /* background:pink; border-radius:15px; */ font-size:19px;
+    text-align:center; padding:2px;
+}
+#edit_t{
+	margin:20px 0 0 37px;
+}
+
+#edit_t th{
+	background:#FFFFCC; border-radius:5px;	
+} 
+#edit_menu{
+	margin:20px 0 0 200px;
+}
+
+/*member_DEL.jsp ui*/
+#del_wrap{
+	width:450px; height:450px; /* border:1px solid skyblue; */
+ 	border-radius:15px; margin-top:50px; margin-left:auto;
+  	margin-right:auto; /* box-shadow:10px 10px 10px red; */
+}
+#del_wrap .del_title{
+	margin:10px 0 0 180px; width:80px;
+    /* background:pink; border-radius:15px; */ font-size:19px;
+    text-align:center; padding:2px;
+}
+#del_t{
+	margin:20px 0 0 20px;
+}
+#del_t th{
+    background:#FFFFCC; border-radius:5px;	
+}
+#del_menu{
+	margin:20px 0 0 160px;
+}
+
+

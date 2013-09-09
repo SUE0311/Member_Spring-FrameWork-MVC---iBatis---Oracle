@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<!-- JDBC 드라이버 클래스명의 설정-->
+		<property name="driverClassName">
+			<value>oracle.jdbc.driver.OracleDriver</value>
+		</property>
+		<!-- JDBC 접속 문자열 설정 -->
+		<property name="url">
+			<value>jdbc:oracle:thin:@127.0.0.1:1521:orcl
+			</value>
+		</property>
+		<!-- oracle 유저ID 설정-->
+		<property name="username">
+			<value>scott</value>
+		</property>
+		<!-- oracle 패스워드 설정-->
+		<property name="password">
+			<value>tiger</value>
+		</property>
+	</bean>
+	<!-- 스프링 jdbc 즉 스프링으로 oracle 디비 연결 -->
+	
+	<!-- 회원관리+ibatis연동 -->
+	<bean id="memService" class="dao.MemberDAOImpl" />
+	
+	<!-- 방명록 +ibatis연동 -->
+	<bean id="guestService2" class="dao.Guest2DAO" />
+	
+	<!-- 방명록 +spring jdbc -->
+	<bean id="guestService" class="dao.GuestDAOImpl">
+	  <property name="dataSource">
+	   <ref bean="dataSource" />
+	  </property>
+	</bean>	
+
+</beans>
